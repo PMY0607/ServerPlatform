@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pmy.platform.dao.scoreRankDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.pmy.platform.entity.ScoreRankEntity" id="scoreRankMap">
+        <result property="stuNo" column="stu_no"/>
+        <result property="name" column="name"/>
+        <result property="clazz" column="clazz"/>
+        <result property="score" column="score"/>
+        <result property="scoreRank" column="score_rank"/>
+        <result property="totalScore" column="total_score"/>
+        <result property="totalRank" column="total_rank"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="parentUsername" column="parent_username"/>
+        <result property="parentName" column="parent_name"/>
+    </resultMap>
+
+	<select id="selectListVO"
+		resultType="com.pmy.platform.entity.vo.ScoreRankVO" >
+		SELECT * FROM score_rank  score_rank
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectVO"
+		resultType="com.pmy.platform.entity.vo.ScoreRankVO" >
+		SELECT  score_rank.* FROM score_rank  score_rank
+ 		<where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+
+    <select id="selectListView"
+		resultType="com.pmy.platform.entity.view.ScoreRankView" >
+
+		SELECT  score_rank.* FROM score_rank  score_rank
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectView"
+		resultType="com.pmy.platform.entity.view.ScoreRankView" >
+		SELECT * FROM score_rank  score_rank <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+
+</mapper>

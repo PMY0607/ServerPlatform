@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pmy.platform.dao.ClazzDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.pmy.platform.entity.ClazzEntity" id="clazzMap">
+        <result property="clazz" column="clazz"/>
+        <result property="stuNum" column="stu_num"/>
+        <result property="location" column="location"/>
+        <result property="headTeacher" column="head_teacher"/>
+        <result property="teacherName" column="teacher_name"/>
+        <result property="teachers" column="teachers"/>
+        <result property="students" column="students"/>
+        <result property="clazzPic" column="clazz_pic"/>
+        <result property="clazzInfo" column="clazz_info"/>
+        <result property="clickTime" column="click_time"/>
+        <result property="clickNum" column="click_num"/>
+    </resultMap>
+
+	<select id="selectListVO"
+		resultType="com.pmy.platform.entity.vo.ClazzVO" >
+		SELECT * FROM clazz  clazz
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectVO"
+		resultType="com.pmy.platform.entity.vo.ClazzVO" >
+		SELECT  clazz.* FROM clazz  clazz
+ 		<where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+
+    <select id="selectListView"
+		resultType="com.pmy.platform.entity.view.ClazzView" >
+
+		SELECT  clazz.* FROM clazz  clazz
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectView"
+		resultType="com.pmy.platform.entity.view.ClazzView" >
+		SELECT * FROM clazz  clazz <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+
+</mapper>

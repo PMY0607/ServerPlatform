@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pmy.platform.dao.CourseDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.pmy.platform.entity.CourseEntity" id="courseMap">
+        <result property="clazz" column="clazz"/>
+        <result property="courseName" column="course_name"/>
+        <result property="subjectName" column="subject_name"/>
+        <result property="startTime" column="start_time"/>
+        <result property="endTime" column="end_time"/>
+        <result property="content" column="content"/>
+        <result property="cover" column="cover"/>
+        <result property="teacherUsername" column="teacher_username"/>
+        <result property="teacherName" column="teacher_name"/>
+        <result property="thumbsUpNum" column="thumbs_up_num"/>
+        <result property="crazilyNum" column="crazily_num"/>
+        <result property="clickTime" column="click_time"/>
+        <result property="clickNum" column="click_num"/>
+    </resultMap>
+
+	<select id="selectListVO"
+		resultType="com.pmy.platform.entity.vo.CourseVO" >
+		SELECT * FROM course  course
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectVO"
+		resultType="com.pmy.platform.entity.vo.CourseVO" >
+		SELECT  course.* FROM course  course
+ 		<where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+
+    <select id="selectListView"
+		resultType="com.pmy.platform.entity.view.CourseView" >
+
+		SELECT  course.* FROM course  course
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectView"
+		resultType="com.pmy.platform.entity.view.CourseView" >
+		SELECT * FROM course  course <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+
+</mapper>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pmy.platform.dao.SchoolNoticeDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.pmy.platform.entity.SchoolNoticeEntity" id="schoolNoticeMap">
+        <result property="title" column="title"/>
+        <result property="briefIntr" column="brief_intr"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="cover" column="cover"/>
+        <result property="content" column="content"/>
+        <result property="clickTime" column="click_time"/>
+        <result property="clickNum" column="click_num"/>
+    </resultMap>
+
+	<select id="selectListVO"
+		resultType="com.pmy.platform.entity.vo.SchoolNoticeVO" >
+		SELECT * FROM school_notice  school_notice
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectVO"
+		resultType="com.pmy.platform.entity.vo.SchoolNoticeVO" >
+		SELECT  school_notice.* FROM school_notice  school_notice
+ 		<where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+
+    <select id="selectListView"
+		resultType="com.pmy.platform.entity.view.SchoolNoticeView" >
+
+		SELECT  school_notice.* FROM school_notice  school_notice
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectView"
+		resultType="com.pmy.platform.entity.view.SchoolNoticeView" >
+		SELECT * FROM school_notice  school_notice <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+
+</mapper>
