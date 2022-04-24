@@ -14,9 +14,7 @@ import com.pmy.platform.entity.view.CadreView;
 
 /**
  * 班干部
- * 
- * @author 
- * @email 
+ *
  * @date 2022-03-01 10:57:52
  */
 public interface CadreDao extends BaseMapper<CadreEntity> {

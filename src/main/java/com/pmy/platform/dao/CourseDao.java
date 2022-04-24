@@ -14,9 +14,7 @@ import com.pmy.platform.entity.view.CourseView;
 
 /**
  * 课程信息
- * 
- * @author 
- * @email 
+ *
  * @date 2022-03-01 10:57:52
  */
 public interface CourseDao extends BaseMapper<CourseEntity> {

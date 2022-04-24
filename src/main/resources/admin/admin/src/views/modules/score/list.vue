@@ -15,7 +15,7 @@
                   <el-input v-if="contents.inputIcon == 0" v-model="searchForm.clazz" placeholder="班级" clearable></el-input>
                 </el-form-item>
                 <el-form-item :label="contents.inputTitle == 1 ? '家长姓名' : ''">
-                  <el-input v-if="contents.inputIcon == 1 && contents.inputIconPosition == 1" prefix-icon="el-icon-search" v-model="searchForm.name" placeholder="家长姓名" clearable></el-input>
+                  <el-input v-if="contents.inputIcon == 1 && contents.inputIconPosition == 1" prefix-icon="el-icon-search" v-model="searchForm.teacherU" placeholder="家长姓名" clearable></el-input>
                   <el-input v-if="contents.inputIcon == 1 && contents.inputIconPosition == 2" suffix-icon="el-icon-search" v-model="searchForm.name" placeholder="家长姓名" clearable></el-input>
                   <el-input v-if="contents.inputIcon == 0" v-model="searchForm.name" placeholder="家长姓名" clearable></el-input>
                 </el-form-item>
@@ -121,7 +121,7 @@
                 width="50">
             </el-table-column>
             <el-table-column label="索引" :align="contents.tableAlign"  v-if="contents.tableIndex" type="index" width="50" />
-                <el-table-column  :sortable="contents.tableSortable" :align="contents.tableAlign" 
+                <el-table-column  :sortable="contents.tableSortable" :align="contents.tableAlign"
                     prop="stuNo"
                    :header-align="contents.tableAlign"
 		    label="学号">
@@ -129,7 +129,7 @@
                        {{scope.row.stuNo}}
                      </template>
                 </el-table-column>
-                <el-table-column  :sortable="contents.tableSortable" :align="contents.tableAlign" 
+                <el-table-column  :sortable="contents.tableSortable" :align="contents.tableAlign"
                     prop="name"
                    :header-align="contents.tableAlign"
 		    label="姓名">
@@ -137,7 +137,7 @@
                        {{scope.row.name}}
                      </template>
                 </el-table-column>
-                <el-table-column  :sortable="contents.tableSortable" :align="contents.tableAlign" 
+                <el-table-column  :sortable="contents.tableSortable" :align="contents.tableAlign"
                     prop="clazz"
                    :header-align="contents.tableAlign"
 		    label="班级">
@@ -145,7 +145,7 @@
                        {{scope.row.clazz}}
                      </template>
                 </el-table-column>
-                <el-table-column  :sortable="contents.tableSortable" :align="contents.tableAlign" 
+                <el-table-column  :sortable="contents.tableSortable" :align="contents.tableAlign"
                     prop="score"
                    :header-align="contents.tableAlign"
 		    label="成绩">
@@ -153,7 +153,7 @@
                        {{scope.row.score}}
                      </template>
                 </el-table-column>
-                <el-table-column  :sortable="contents.tableSortable" :align="contents.tableAlign" 
+                <el-table-column  :sortable="contents.tableSortable" :align="contents.tableAlign"
                     prop="teacherUsername"
                    :header-align="contents.tableAlign"
 		    label="教师账号">
@@ -161,7 +161,7 @@
                        {{scope.row.teacherUsername}}
                      </template>
                 </el-table-column>
-                <el-table-column  :sortable="contents.tableSortable" :align="contents.tableAlign" 
+                <el-table-column  :sortable="contents.tableSortable" :align="contents.tableAlign"
                     prop="name"
                    :header-align="contents.tableAlign"
 		    label="教师姓名">
@@ -169,7 +169,7 @@
                        {{scope.row.name}}
                      </template>
                 </el-table-column>
-                <el-table-column  :sortable="contents.tableSortable" :align="contents.tableAlign" 
+                <el-table-column  :sortable="contents.tableSortable" :align="contents.tableAlign"
                     prop="updateTime"
                    :header-align="contents.tableAlign"
 		    label="登记日期">
@@ -177,7 +177,7 @@
                        {{scope.row.updateTime}}
                      </template>
                 </el-table-column>
-                <el-table-column  :sortable="contents.tableSortable" :align="contents.tableAlign" 
+                <el-table-column  :sortable="contents.tableSortable" :align="contents.tableAlign"
                     prop="parentUsername"
                    :header-align="contents.tableAlign"
 		    label="家长账号">
@@ -185,7 +185,7 @@
                        {{scope.row.parentUsername}}
                      </template>
                 </el-table-column>
-                <el-table-column  :sortable="contents.tableSortable" :align="contents.tableAlign" 
+                <el-table-column  :sortable="contents.tableSortable" :align="contents.tableAlign"
                     prop="name"
                    :header-align="contents.tableAlign"
 		    label="家长姓名">
@@ -419,25 +419,6 @@ export default {
         })
       })
     },
-    // 表格
-    // rowStyle({ row, rowIndex}) {
-    //   if (rowIndex % 2 == 1) {
-    //     if(this.contents.tableStripe) {
-    //       return {color:this.contents.tableStripeFontColor}
-    //     }
-    //   } else {
-    //     return ''
-    //   }
-    // },
-    // cellStyle({ row, rowIndex}){
-    //   if (rowIndex % 2 == 1) {
-    //     if(this.contents.tableStripe) {
-    //       return {backgroundColor:this.contents.tableStripeBgColor}
-    //     }
-    //   } else {
-    //     return ''
-    //   }
-    // },
     headerRowStyle({ row, rowIndex}){
       return {color: this.contents.tableHeaderFontColor}
     },
@@ -446,41 +427,6 @@ export default {
     },
     // 表格按钮
     contentTableBtnStyleChange(){
-      // this.$nextTick(()=>{
-      //   setTimeout(()=>{
-      //     document.querySelectorAll('.table-content .tables .el-table__body .el-button--success').forEach(el=>{
-      //       el.style.height = this.contents.tableBtnHeight
-      //       el.style.color = this.contents.tableBtnDetailFontColor
-      //       el.style.fontSize = this.contents.tableBtnFontSize
-      //       el.style.borderWidth = this.contents.tableBtnBorderWidth
-      //       el.style.borderStyle = this.contents.tableBtnBorderStyle
-      //       el.style.borderColor = this.contents.tableBtnBorderColor
-      //       el.style.borderRadius = this.contents.tableBtnBorderRadius
-      //       el.style.backgroundColor = this.contents.tableBtnDetailBgColor
-      //     })
-      //     document.querySelectorAll('.table-content .tables .el-table__body .el-button--primary').forEach(el=>{
-      //       el.style.height = this.contents.tableBtnHeight
-      //       el.style.color = this.contents.tableBtnEditFontColor
-      //       el.style.fontSize = this.contents.tableBtnFontSize
-      //       el.style.borderWidth = this.contents.tableBtnBorderWidth
-      //       el.style.borderStyle = this.contents.tableBtnBorderStyle
-      //       el.style.borderColor = this.contents.tableBtnBorderColor
-      //       el.style.borderRadius = this.contents.tableBtnBorderRadius
-      //       el.style.backgroundColor = this.contents.tableBtnEditBgColor
-      //     })
-      //     document.querySelectorAll('.table-content .tables .el-table__body .el-button--danger').forEach(el=>{
-      //       el.style.height = this.contents.tableBtnHeight
-      //       el.style.color = this.contents.tableBtnDelFontColor
-      //       el.style.fontSize = this.contents.tableBtnFontSize
-      //       el.style.borderWidth = this.contents.tableBtnBorderWidth
-      //       el.style.borderStyle = this.contents.tableBtnBorderStyle
-      //       el.style.borderColor = this.contents.tableBtnBorderColor
-      //       el.style.borderRadius = this.contents.tableBtnBorderRadius
-      //       el.style.backgroundColor = this.contents.tableBtnDelBgColor
-      //     })
-
-      //   }, 50)
-      // })
     },
     // 分页
     contentPageStyleChange(){
@@ -633,11 +579,11 @@ export default {
       }
     }
   }
-  
+
 
   .el-button+.el-button {
     margin:0;
-  } 
+  }
 
   .tables {
 	& /deep/ .el-button--success {
@@ -650,7 +596,7 @@ export default {
 		border-radius: 20px;
 		background-color: rgba(249, 173, 147, 1);
 	}
-	
+
 	& /deep/ .el-button--primary {
 		height: 40px;
 		color: #333;
@@ -661,7 +607,7 @@ export default {
 		border-radius: 20px;
 		background-color: rgba(249, 173, 147, 1);
 	}
-	
+
 	& /deep/ .el-button--danger {
 		height: 40px;
 		color: #333;
@@ -683,7 +629,7 @@ export default {
 	.table-content {
 		background: transparent;
 	}
-	
+
 	.tables /deep/ .el-table__body tr {
 				background-color: rgba(255, 255, 255, 1) !important;
 				color: rgba(92, 93, 95, 1) !important;
@@ -695,10 +641,10 @@ export default {
 		background-color: #F5F7FA !important;
 		color: #606266 !important;
 	}
-	
+
 	 .tables /deep/ .el-table__body tr:hover>td {
 	   	   background-color: #f5f5f5 !important;
 	   	   	   color: #333 !important;
 	   	 }
-	 
+
 </style>

@@ -16,8 +16,6 @@ import org.apache.commons.beanutils.BeanUtils;
 /**
  * 学校公告评论表
  * 数据库通用操作实体类（普通增删改查）
- * @author 
- * @email 
  * @date 2022-03-01 10:57:52
  */
 @TableName("discuss_school_notice")

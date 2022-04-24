@@ -14,9 +14,7 @@ import com.pmy.platform.entity.view.ParentView;
 
 /**
  * 家长
- * 
- * @author 
- * @email 
+ *
  * @date 2022-03-01 10:57:52
  */
 public interface ParentDao extends BaseMapper<ParentEntity> {

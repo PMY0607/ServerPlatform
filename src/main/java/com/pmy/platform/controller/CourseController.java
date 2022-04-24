@@ -31,8 +31,6 @@ import com.pmy.platform.utils.MPUtil;
 /**
  * 课程信息
  * 后端接口
- * @author 
- * @email 
  * @date 2022-03-01 10:57:52
  */
 @RestController

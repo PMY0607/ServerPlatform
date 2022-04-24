@@ -14,9 +14,7 @@ import com.pmy.platform.entity.view.ScoreView;
 
 /**
  * 学生成绩
- * 
- * @author 
- * @email 
+ *
  * @date 2022-03-01 10:57:52
  */
 public interface ScoreDao extends BaseMapper<ScoreEntity> {

@@ -14,9 +14,7 @@ import com.pmy.platform.entity.view.DiscussSchoolNoticeView;
 
 /**
  * 学校公告评论表
- * 
- * @author 
- * @email 
+ *
  * @date 2022-03-01 10:57:52
  */
 public interface DiscussSchoolNoticeDao extends BaseMapper<DiscussSchoolNoticeEntity> {

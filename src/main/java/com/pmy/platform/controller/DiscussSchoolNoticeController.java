@@ -28,8 +28,6 @@ import com.pmy.platform.utils.MPUtil;
 /**
  * 学校公告评论表
  * 后端接口
- * @author 
- * @email 
  * @date 2022-03-01 10:57:52
  */
 @RestController

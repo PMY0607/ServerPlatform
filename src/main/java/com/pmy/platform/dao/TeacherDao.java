@@ -14,9 +14,7 @@ import com.pmy.platform.entity.view.TeacherEntityView;
 
 /**
  * 教师
- * 
- * @author 
- * @email 
+ *
  * @date 2022-03-01 10:57:52
  */
 public interface TeacherDao extends BaseMapper<TeacherEntity> {

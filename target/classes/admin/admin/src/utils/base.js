@@ -9,7 +9,7 @@ const base = {
     },
     getProjectName(){
         return {
-            projectName: "中小学家校服务系统设计与实现"
+            projectName: "中小学家校服务系统"
         } 
     }
 }

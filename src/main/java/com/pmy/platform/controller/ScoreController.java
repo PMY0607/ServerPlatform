@@ -37,8 +37,6 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 /**
  * 学生成绩
  * 后端接口
- * @author 
- * @email 
  * @date 2022-03-01 10:57:52
  */
 @RestController
@@ -217,8 +215,6 @@ public class ScoreController {
 
 
 
-
-
     @RequestMapping("/importExcel")
     public R importExcel(@RequestParam("file") MultipartFile file){
         try {
@@ -250,7 +246,7 @@ public class ScoreController {
                     scoreEntity.setTeacherUsername(teacherUsername);
                     String teacherName = CommonUtil.getCellValue(row.getCell(6));
                     scoreEntity.setTeacherName(teacherName);
-                     
+                    scoreEntity.setAddTime(new Date());
                     //想数据库中添加新对象
                     scoreService.insert(scoreEntity);//方法
                 }

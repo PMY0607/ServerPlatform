@@ -14,9 +14,7 @@ import com.pmy.platform.entity.view.ClazzNoticeView;
 
 /**
  * 班级公告
- * 
- * @author 
- * @email 
+ *
  * @date 2022-03-01 10:57:52
  */
 public interface ClazzNoticeDao extends BaseMapper<ClazzNoticeEntity> {

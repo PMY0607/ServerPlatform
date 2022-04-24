@@ -15,8 +15,6 @@ import com.pmy.platform.entity.view.ScoreRankView;
 /**
  * 成绩排名
  * 
- * @author 
- * @email 
  * @date 2022-03-01 10:57:52
  */
 public interface scoreRankDao extends BaseMapper<ScoreRankEntity> {

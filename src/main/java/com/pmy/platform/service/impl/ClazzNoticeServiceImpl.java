@@ -34,6 +34,7 @@ public class ClazzNoticeServiceImpl extends ServiceImpl<ClazzNoticeDao, ClazzNot
     @Override
 	public PageUtils queryPage(Map<String, Object> params, Wrapper<ClazzNoticeEntity> wrapper) {
 		  Page<ClazzNoticeView> page =new Query<ClazzNoticeView>(params).getPage();
+
 	        page.setRecords(baseMapper.selectListView(page,wrapper));
 	    	PageUtils pageUtil = new PageUtils(page);
 	    	return pageUtil;

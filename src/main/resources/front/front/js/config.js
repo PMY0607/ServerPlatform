@@ -1,5 +1,5 @@
 
-var projectName = '中小学家校服务系统设计与实现';
+var projectName = '中小学家校服务系统';
 /**
  * 轮播图配置
  */
